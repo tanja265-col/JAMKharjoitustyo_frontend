@@ -21,80 +21,24 @@
       "name": "Kaija",
       "email": "kaija@",
       "address": "kukka 1",
-      "info": "-",
+      "info": "tulossa ehkä",
       "active": "ei"
     },
     {
-      "id": 7,
-      "name": "Sanna",
-      "email": "sanna@jotain",
-      "address": "K",
-      "info": "alotus 1.3.2018",
-      "active": "on"
-    },
-    {
-      "id": 8,
-      "name": "tqaat",
-      "email": "atg",
-      "address": null,
-      "info": null,
-      "active": null
-    },
-    {
-      "id": 9,
-      "name": "gdga",
-      "email": "ga<g",
-      "address": "a",
-      "info": null,
-      "active": null
-    },
-    {
-      "id": 10,
-      "name": null,
-      "email": null,
-      "address": "ga",
-      "info": null,
-      "active": "gga"
-    },
-    {
-      "id": 11,
-      "name": null,
-      "email": "agha",
-      "address": "aga",
-      "info": null,
-      "active": null
-    },
-    {
-      "id": 12,
-      "name": null,
-      "email": "a",
-      "address": "ag",
-      "info": "ag",
-      "active": "ag"
-    },
-    {
-      "id": 13,
-      "name": null,
-      "email": "aher",
-      "address": "haeah",
-      "info": "ah",
-      "active": "ahr"
-    },
-    {
       "id": 14,
-      "name": "ga",
-      "email": "ga",
-      "address": "agh<bha",
-      "info": null,
-      "active": null
+      "name": "Susanna",
+      "email": "susa@iki.fi",
+      "address": "Kukkatie 10",
+      "info": "Aloitus ensi kuussa ",
+      "active": "ei"
     },
     {
       "id": 15,
-      "name": "fdh",
-      "email": "<bhn",
-      "address": "n",
-      "info": null,
-      "active": null
+      "name": "laura",
+      "email": "laura@ik.fi",
+      "address": "kauppatie 1",
+      "info": "aloittanut 1.1.2019",
+      "active": "on"
     }
   ],
   "comments": [],
