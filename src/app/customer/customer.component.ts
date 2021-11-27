@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApiService } from '../services/api.service';
 import { CustomerModel } from '../customer.model';
-//import { Validators } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-customer',
@@ -23,11 +23,11 @@ export class CustomerComponent implements OnInit {
     //lomakkeen kohdat bindaus -> html-lomakkeeseen formgroup ja formcontrol-names
     this.formValue = this.formbuilder.group({
       //avain- arvoparit
-      name: [''],
-      email: [''],
-      address: [''],
-      info: [''],
-      active: [''],
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.email]],
+      address: ['', [Validators.required, Validators.maxLength(30)]],
+      info: ['', [Validators.maxLength(40)]],
+      active: ['', [Validators.maxLength(10)]],
     });
     this.getAllCustomers();
   }

@@ -87,6 +87,9 @@
               id="exampleInputPassword1"
               aria-describedby="emailHelp"
             />
+            <div *ngIf="formValue.controls['name'].hasError('required')">
+              Nimi vaaditaan.
+            </div>
           </div>
 
           <div class="mb-3">
@@ -99,64 +102,97 @@
               class="form-control"
               id="exampleInputPassword1"
             />
+            <div
+              *ngIf="
+                formValue.controls['email'].hasError('required') &&
+                formValue.controls['email'].touched
+              "
+            >
+              Sähköpostiosoite vaaditaan
+
+              <div
+                *ngIf="
+                  formValue.controls['email'].hasError('email') &&
+                  formValue.controls['email'].errors
+                "
+              ></div>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Osoite</label
+              >
+              <input
+                type="text"
+                formControlName="address"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+              <div
+                *ngIf="
+                  formValue.controls['address'].errors &&
+                  formValue.controls['address'].hasError('required')
+                "
+              >
+                Osoite vaaditaan.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Info</label>
+              <input
+                type="text"
+                formControlName="info"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+              <div *ngIf="formValue.controls['info'].errors">
+                Max 40 merkkiä.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="mb-3 form-label" for="exampleCheck1">Active</label>
+              <input
+                type="text"
+                formControlName="active"
+                class="form-control"
+                id="exampleCheck1"
+              />
+              <div *ngIf="formValue.controls['active'].errors">
+                Max 10 merkkiä.
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Osoite</label>
-            <input
-              type="text"
-              formControlName="address"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Info</label>
-            <input
-              type="text"
-              formControlName="info"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <div class="mb-3">
-            <label class="mb-3 form-label" for="exampleCheck1">Active</label>
-            <input
-              type="text"
-              formControlName="active"
-              class="form-control"
-              id="exampleCheck1"
-            />
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="cancel"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Sulje
+            </button>
+            <button
+              id="add"
+              type="button"
+              [disabled]="!formValue.valid"
+              *ngIf="showAdd"
+              (click)="postCustomerDetails()"
+              class="btn btn-primary"
+            >
+              Lisää
+            </button>
+            <button
+              (click)="updateCustomerDetails()"
+              type="button"
+              *ngIf="showUpdate"
+              id="update"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Päivitä
+            </button>
           </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          id="cancel"
-          class="btn btn-secondary"
-          data-bs-dismiss="modal"
-        >
-          Sulje
-        </button>
-        <button
-          id="add"
-          type="button"
-          *ngIf="showAdd"
-          (click)="postCustomerDetails()"
-          class="btn btn-primary"
-        >
-          Lisää
-        </button>
-        <button
-          (click)="updateCustomerDetails()"
-          type="button"
-          *ngIf="showUpdate"
-          id="update"
-          class="btn btn-secondary"
-          data-bs-dismiss="modal"
-        >
-          Päivitä
-        </button>
       </div>
     </div>
   </div>
