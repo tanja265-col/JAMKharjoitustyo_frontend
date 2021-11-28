@@ -66,6 +66,14 @@ export class CustomerComponent implements OnInit {
       this.customerData = res;
     });
   }
+
+  /*
+  getAllCustomers() {
+    //haetaan servicen avulla tilaamalla obervable
+    this.api.getCustomer().subscribe((data) => (this.customerData = data));
+  }
+  */
+
   //asiakkaan poisto (sen id.n perusella joka halutaan poistaa )
   deleteCustomer(row: any) {
     this.api.deleteCustomer(row.id).subscribe((res: any) => {
@@ -91,6 +99,7 @@ export class CustomerComponent implements OnInit {
     this.customerModelObj.address = this.formValue.value.address;
     this.customerModelObj.info = this.formValue.value.info;
     this.customerModelObj.active = this.formValue.value.active;
+    //this.customerModelObj.id = this.formValue.value.id;
     //tarvitaan objekti ja sen id
     this.api
       .updateCustomer(this.customerModelObj, this.customerModelObj.id)
