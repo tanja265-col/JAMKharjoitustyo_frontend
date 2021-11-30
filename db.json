@@ -4,7 +4,7 @@
       "id": 4,
       "name": "Pekka",
       "email": "s3333@jamk.fi",
-      "address": "gagh",
+      "address": "kuusikuja 10",
       "info": "uusi asiakas, aloittaa 1.1.2022",
       "active": "ei "
     },
@@ -14,14 +14,6 @@
       "email": "seija@iki.fi",
       "address": "Kelotie 15",
       "info": "aloittaa ensi kuussa, päivä sovitaan vielä ",
-      "active": "ei"
-    },
-    {
-      "id": 6,
-      "name": "Kaija",
-      "email": "kaija@",
-      "address": "kukka 1",
-      "info": "tulossa ehkä",
       "active": "ei"
     },
     {

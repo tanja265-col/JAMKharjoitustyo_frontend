@@ -27,68 +27,41 @@ export class ApiService {
 
   //metodit
   //POST: lisätään asiakas palvelimelle
+  //'http://localhost:3000/posts'
   postCustomer(data: any) {
-    return this.http.post<any>('http://localhost:3000/posts', data).pipe(
+    return this.http.post<any>(this.baseUrl, data).pipe(
       map((res: any) => {
         return res;
       })
     );
   }
-  /*
-  postCustomer(customer: any): Observable<CustomerModel> {
-    return this.http
-      .post<CustomerModel>(this.baseUrl, customer, headers)
-      .pipe(catchError(this.handleError));
-  }
-*/
+
   // GET: haku
+  //'http://localhost:3000/posts'
   getCustomer(data: any) {
-    return this.http.get<any>('http://localhost:3000/posts').pipe(
+    return this.http.get<any>(this.baseUrl).pipe(
       map((res: any) => {
         return res;
       })
     );
   }
-  /*
-  getCustomer(data: any): Observable<CustomerModel[]> {
-    return this.http
-      .get<CustomerModel[]>(this.baseUrl)
-      .pipe(catchError(this.handleError));
-  }
-  */
+
   // PUT: Päivitetään asiakkaan tiedot id:n perusteella
+  //'http://localhost:3000/posts/' + id, data
   updateCustomer(data: any, id: number) {
-    return this.http.put<any>('http://localhost:3000/posts/' + id, data).pipe(
+    return this.http.put<any>('this.baseUrl/' + id, data).pipe(
       map((res: any) => {
         return res;
       })
     );
   }
-  /*
-  updateCustomer(
-    customer: any,
-    id: number | string
-  ): Observable<CustomerModel> {
-    const url = `${this.baseUrl}/${customer._id}`;
-    return this.http
-      .put<CustomerModel>(url, customer, headers)
-      .pipe(catchError(this.handleError));
-  }
-*/
+
   // DELETE: Poistetaan asiakas id:n perusteella
   deleteCustomer(id: number) {
-    return this.http.delete<any>('http://localhost:3000/posts/' + id).pipe(
+    return this.http.delete<any>('this.baseUrl/' + id).pipe(
       map((res: any) => {
         return res;
       })
     );
   }
-  /*
-  deleteCustomer(id: string | number): Observable<CustomerModel> {
-    const url = `${this.baseUrl}/${id}`;
-    return this.http
-      .delete<CustomerModel>(url, headers)
-      .pipe(catchError(this.handleError));
-  }
-  */
 }

@@ -1,27 +1,32 @@
 # Asiakasrekisteri
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
+Projekti on luotu [Angular CLI]:llä (https://github.com/angular/angular-cli)
+version 13.0.2.
 
-## Development server
+# Yleiskastsaus
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Sovellus on tarkoitettu yksityisyrittäjän asiakastietojen ylläpitoon. Asiakasrekisteri sisältää listan asiakkaista. Asiakastiedoistoista löytyvät kentät nimelle, sähköpostiosoitteelle, osoitteelle, infolle asiakassuhteesta sekä tiedolle onko asiakassuhde tällä hetkellä aktiviinen. Asiakkaan tietoja voi muokata ja rekisteriin voi lisätä uuden asiakkaan ja vanhan asiakkaan voi poistaa.
 
-## Code scaffolding
+# Käytetyt teknologiat
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Frontend on toteutettu Angularilla ja Backenend Nodejs:llä, Expressillä sekä tietokanta MySQL:llä. Kehitysversio on saatavilla Githubissa: git clone https://github.com/tanja265-col/JAMKharjoitustyo_frontend.git
+
+# Reflektio ja ajankäyttö
+
+Tämä pienyrittäjälle suunnatun Asiakasrekisteri-sovelluksen perustoiminnot ja idea rakentuivat eri vaiheiden kautta. Aluksi ajatuksena oli tehdä sovelluksesta melko monimutkaisempi versio - niin toiminnoiltaan kuin rakenteeltaankin. Ajankäytön rajallisuuden vuoksi sovelluksesta muodostui yksikertainen, mutta ehkä selkeä malli. Matkanvarrella aikaavievää näin aloittelijalle olivat erilaiset virheilmoitukset ja niiden merkitysten selvittäminen sekä myös eri ohjelmien tiheät päivitykset. Itse pidin frontendin ulkoasun suunnittelusta ja olisinkin toivonut että erityisesti sen puolen työstämiseen olisi ennättänyt keskittyä enemmän. Kokonaisuutena käytin tehtävään aika paljon aikaa (ehkä noin kaksikertaisen määrän normaalia enemmän), sillä jumikohtien pohdinta oli välillä hidasta, mutta toki opettavaistsa. Tein harjoitustehtävä joitain osuuksia uudelleen ja katsoin myös kurssin videoita uudelleen löytääkseni ratkaisuja ongelmakohtiin. Käytin tehtävässä osin tutoriaaleja (https://www.bezkoder.com/angular-11-crud-app/, https://www.bezkoder.com/node-js-rest-api-express-mysql/). Lisäksi käytin kurssimateriaaleja ja esim. Bootstrapin ja Angularin sivustoja. Kehittämiskohteikseni näkisin idoiden soveltamisen käytäntöön ja erityisesti rutiinin sekä lisäkokemuksen hankkimisen.
+
+## Kehitysajan serveri
+
+Aja `ng serve` . Navkoi: `http://localhost:4200/`. Sovellus latautuu automaattisesti.
+
+## Koodi
+
+Aja `ng generate component component-name` uuden komponentin luomiseksi. Voi käyttää myös: `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Aja komento `ng build` buildataksesi projektin. Buildattu versio syntyy kansioon`dist/`.
 
-## Running unit tests
+## Lisätietoa
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Saadaksesi lisätietoa Angularista aja komento `ng help` tai käy nettisivulla[Angular CLI Overview and Command Reference](https://angular.io/cli).
