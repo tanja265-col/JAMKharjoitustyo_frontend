@@ -3,7 +3,7 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "dist/meanfront",
+    "public": "dist/asiakasrekisteri",
     "ignore": [
       "firebase.json",
       "**/.*",

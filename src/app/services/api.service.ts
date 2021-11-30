@@ -14,8 +14,10 @@ const headers = {
 @Injectable({
   providedIn: 'root',
 })
+
+//http://localhost:3000/customers
 export class ApiService {
-  private baseUrl = 'http://localhost:3000/customers';
+  private baseUrl = ' https://dry-scrubland-31597.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
